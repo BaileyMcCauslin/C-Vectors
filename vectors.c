@@ -14,19 +14,19 @@ vector2 addVect2s( vector2 vectorOne , vector2 vectorTwo )
 vector3 addVect3s( vector3 vectorOne , vector3 vectorTwo )
     {
         vector3 newVect; 
-        newVector.x = vectorOne.x + vectorTwo.x;
-        newVector.y = vectorOne.y + vectorTwo.y;
-        newVector.z = vectorOne.z + vectorTwo.z;
+        newVect.x = vectorOne.x + vectorTwo.x;
+        newVect.y = vectorOne.y + vectorTwo.y;
+        newVect.z = vectorOne.z + vectorTwo.z;
         return newVect; 
     }
 
 vector4 addVect4s( vector4 vectorOne , vector4 vectorTwo )
     {
         vector4 newVect; 
-        newVector.x = vectorOne.x + vectorTwo.x;
-        newVector.y = vectorOne.y + vectorTwo.y;
-        newVector.z = vectorOne.z + vectorTwo.z;
-        newVector.w = vectorOne.w + vectorTwo.w; 
+        newVect.x = vectorOne.x + vectorTwo.x;
+        newVect.y = vectorOne.y + vectorTwo.y;
+        newVect.z = vectorOne.z + vectorTwo.z;
+        newVect.w = vectorOne.w + vectorTwo.w; 
         return newVect; 
     }
 
