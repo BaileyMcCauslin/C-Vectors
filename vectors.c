@@ -156,53 +156,187 @@ vector4 vect4Sub( vector4 vector , float sub )
 
 vector2 vect2Div( vector2 vector , float div )
     {
-        vector.x /= div;
-        vector.y /= div;
-        return vector;    
+        if( vector.x == 0 )
+        {
+            vector.x = 0;
+        }
+        else
+        {
+            vector.x = vector.x / div; 
+        }
+        if( vector.y == 0 )
+        {
+            vector.y = 0;
+        }
+        else
+        {
+            vector.y = vector.y / div; 
+        }
+
+        return vector;  
     }
 
 vector3 vect3Div( vector3 vector , float div )
     {
-        vector.x /= div;
-        vector.y /= div;
-        vector.z /= div;
-        return vector;    
+        if( vector.x == 0 )
+        {
+            vector.x = 0;
+        }
+        else
+        {
+            vector.x = vector.x / div; 
+        }
+        if( vector.y == 0 )
+        {
+            vector.y = 0;
+        }
+        else
+        {
+            vector.y = vector.y / div; 
+        }
+        if( vector.z == 0 )
+        {
+            vector.z = 0; 
+        }
+        else
+        {
+            vector.z = vector.z / div;
+        }
+        return vector;     
     }
 
 vector4 vect4Div( vector4 vector , float div )
     {
-        vector.x /= div;
-        vector.y /= div;
-        vector.z /= div;
-        vector.w /= div;
-        return vector;    
+        if( vector.x == 0 )
+        {
+            vector.x = 0;
+        }
+        else
+        {
+            vector.x = vector.x / div; 
+        }
+        if( vector.y == 0 )
+        {
+            vector.y = 0;
+        }
+        else
+        {
+            vector.y = vector.y / div; 
+        }
+        if( vector.z == 0 )
+        {
+            vector.z = 0; 
+        }
+        else
+        {
+            vector.z = vector.z / div;
+        }
+        if( vector.w == 0 )
+        {
+            vector.w = 0;
+        }
+        else
+        {
+            vector.w = vector.w / div;
+        }
+
+        return vector;     
     }
 
 vector2 normalizeVector2( vector2 vector )
     {
-	    float mag = sqrt( ( vector.x * vector.x ) + ( vector.y * vector.y ) );
-	    vector.x /= mag;
-	    vector.y /= mag;
+        float mag; 
+        mag = sqrt( ( vector.x * vector.x ) + ( vector.y * vector.y ) );
+
+        if( vector.x == 0 )
+        {
+            vector.x = 0;
+        }
+        else
+        {
+            vector.x = vector.x / mag; 
+        }
+        if( vector.y == 0 )
+        {
+            vector.y = 0;
+        }
+        else
+        {
+            vector.y = vector.y / mag; 
+        }
+
         return vector; 
     }
 
 vector3 normalizeVector3( vector3 vector )
     {
-	    float mag = sqrt( ( vector.x * vector.x ) + ( vector.y * vector.y ) + ( vector.z * vector.z ) );
-	    vector.x /= mag;
-	    vector.y /= mag;
-	    vector.z /= mag;
+        float mag; 
+        mag = sqrt( ( vector.x * vector.x ) + ( vector.y * vector.y ) + ( vector.z * vector.z ) );
+
+        if( vector.x == 0 )
+        {
+            vector.x = 0;
+        }
+        else
+        {
+            vector.x = vector.x / mag; 
+        }
+        if( vector.y == 0 )
+        {
+            vector.y = 0;
+        }
+        else
+        {
+            vector.y = vector.y / mag; 
+        }
+        if( vector.z == 0 )
+        {
+            vector.z = 0; 
+        }
+        else
+        {
+            vector.z = vector.z / mag;
+        }
         return vector; 
     }
 
 vector4 normalizeVector4( vector4 vector )
     {
+        float mag; 
+        mag = sqrt( ( vector.x * vector.x ) + ( vector.y * vector.y ) + ( vector.z * vector.z ) + ( vector.w * vector.w) );
 
-	    float mag = sqrt( ( vector.x * vector.x ) + ( vector.y * vector.y ) + ( vector.z * vector.z ) + ( vector.w * vector.w ) );
-	    vector.x /= mag;
-	    vector.y /= mag;
-	    vector.z /= mag;
-        vector.w /= mag;
+        if( vector.x == 0 )
+        {
+            vector.x = 0;
+        }
+        else
+        {
+            vector.x = vector.x / mag; 
+        }
+        if( vector.y == 0 )
+        {
+            vector.y = 0;
+        }
+        else
+        {
+            vector.y = vector.y / mag; 
+        }
+        if( vector.z == 0 )
+        {
+            vector.z = 0; 
+        }
+        else
+        {
+            vector.z = vector.z / mag;
+        }
+        if( vector.w == 0 )
+        {
+            vector.w = 0;
+        }
+        else
+        {
+            vector.w = vector.w / mag; 
+        }
         return vector; 
     }
 
